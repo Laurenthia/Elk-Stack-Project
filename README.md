@@ -78,7 +78,8 @@ The playbook implements the following tasks:
    - python3-pip
    - docker
 - To Launch and expose the container run sebp/elk:761 
-   - The container should be started with the published ports:5601:5601 9200:9200 5044:5044   
+   - The container should be started with the published ports:
+   - 5601:5601 9200:9200 5044:5044   
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
