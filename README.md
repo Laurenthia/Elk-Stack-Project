@@ -7,7 +7,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the live Elk Deployment file may be used to install only certain pieces of it, such as Filebeat.
 
-  /etc/ansible/install-elk.yml
+  /etc/ansible/[install-elk.yml](https://github.com/Laurenthia/Elk-Stack-Project/blob/0c8b4c9e1e73ad88d03742d3986ea5eb7a5b5db5/install-elk.yml)
 
 This document contains the following details:
 - Description of the Topology
@@ -103,7 +103,7 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the [filebeat-config.yml](https://github.com/Laurenthia/Elk-Stack-Project/blob/7d02655467eca20f2e33ce092bd37f3b12cba20e/filebeat-config.yml) file to _____.
+- Copy the [filebeat-config.yml](https://github.com/Laurenthia/Elk-Stack-Project/blob/7d02655467eca20f2e33ce092bd37f3b12cba20e/filebeat-config.yml) and [metricbeat-config.yml](https://github.com/Laurenthia/Elk-Stack-Project/blob/0c8b4c9e1e73ad88d03742d3986ea5eb7a5b5db5/metricbeat-config.yml)file to /etc/ansible/roles.
 - Update the _____ file to include...
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
