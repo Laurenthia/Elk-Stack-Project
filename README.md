@@ -28,19 +28,22 @@ Load balancing ensures that the application will be highly available, in additio
 - What is the advantage of a jump box? 
   -   The advantage of a jump box forces all of the traffic to a single node. This Jump Box requires SSH for added security. 
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
+- What does Filebeat watch for?
+  - Filebeat monitors the specified log files or locations, collects log events, and sends them to Elasticsearch. 
+- What does Metricbeat record?
+  - Metricbeat is lightweight that periodically records metrics from OS and from services running on the server. It takes the statistics and metrics that it collects and forwards them to Elasticsearch. 
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Jump Box | Gateway  | 10.0.0.4   | Linux (Ubuntu 18.04)            |
+| Web 1    | DVWA     | 10.0.0.5   | Linux (Ubuntu 18.04)           |
+| Web 2    | DVWA     | 10.0.0.6   | Linux (Ubuntu 18.04)            |
+| Web 3    | DVWA     | 10.0.0.7   | Linux (Ubuntu 18.04)           |
+| ELK      | ELK      | 10.2.0.5   | Linux (Ubuntu 18.04)           |
 
 ### Access Policies
 
