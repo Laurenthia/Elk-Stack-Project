@@ -39,9 +39,9 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.4   | Linux (Ubuntu 18.04)            |
+| Jump Box | Gateway  | 10.0.0.4   | Linux (Ubuntu 18.04)           |
 | Web 1    | DVWA     | 10.0.0.5   | Linux (Ubuntu 18.04)           |
-| Web 2    | DVWA     | 10.0.0.6   | Linux (Ubuntu 18.04)            |
+| Web 2    | DVWA     | 10.0.0.6   | Linux (Ubuntu 18.04)           |
 | Web 3    | DVWA     | 10.0.0.7   | Linux (Ubuntu 18.04)           |
 | ELK      | ELK      | 10.2.0.5   | Linux (Ubuntu 18.04)           |
 
@@ -59,9 +59,11 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | No                  | Personal IP          |
+| Web 1    | No                  | 10.0.0.4             |
+| Web 2    | No                  | 10.0.0.4             |
+| Web 3    | No                  | 10.0.0.4             |
+| Elk      | No                  | 10.0.0.4 & Personal IP|
 
 ### Elk Configuration
 
