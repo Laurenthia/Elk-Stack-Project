@@ -108,7 +108,7 @@ SSH into the control node and follow the steps below:
 - Which file is the playbook? 
   - [filebeat-playbook.yml](https://github.com/Laurenthia/Elk-Stack-Project/blob/c743bb59c7b913a42d73c256de95758fde7bd690/filebeat-playbook.yml)
 - Where do you copy it?
-  -  curl https://github.com/Laurenthia/Elk-Stack-Project/blob/c743bb59c7b913a42d73c256de95758fde7bd690/filebeat-playbook.yml > '/etc/ansible/filebeat-playbook.yml'
+  -  curl https://github.com/Laurenthia/Elk-Stack-Project/blob/c743bb59c7b913a42d73c256de95758fde7bd690/filebeat-playbook.yml > `/etc/ansible/filebeat-playbook.yml`
 - Which file do you update to make Ansible run the playbook on a specific machine?
   -  Update the Ansible [Hosts](https://github.com/Laurenthia/Elk-Stack-Project/blob/190ee4fb4680ad393dbaca2aa173d5fe264af010/Hosts) file within the Ansible container /etc/ansible/hosts
 - How do I specify which machine to install the ELK server on versus which to install Filebeat on?
@@ -118,15 +118,15 @@ SSH into the control node and follow the steps below:
 
 ### The Commands Needed to Run the Ansible Configuration for the Elk-Server:
 
-- SSH into jumpBox Vm ssh RedAdmin@[Public IP address]
-- Run sudo docker container list -a
-- Run sudo docker start container [Container name]
-- Run sudo docker attach container [Container name]
+- SSH into jumpBox Vm `ssh RedAdmin@[Public IP address]`
+- Run `sudo docker container list -a`
+- Run `sudo docker start container [Container name]`
+- Run `sudo docker attach container [Container name]`
 - Update the hosts file in /etc/ansible/[Hosts](https://github.com/Laurenthia/Elk-Stack-Project/blob/190ee4fb4680ad393dbaca2aa173d5fe264af010/Hosts)
-- Create new Ansible playbook to use for your new Elk Vm curl [elk.yml](https://github.com/Laurenthia/Elk-Stack-Project/blob/26d5ae911b18cd17d7612c40b87b982745b93bbf/install-elk.yml) > /etc/ansible/install-elk.yml
+- Create new Ansible playbook to use for your new Elk Vm curl [elk.yml](https://github.com/Laurenthia/Elk-Stack-Project/blob/26d5ae911b18cd17d7612c40b87b982745b93bbf/install-elk.yml) > `/etc/ansible/install-elk.yml`
 - Run ansible-playbook intall-elk.yml
 - After the Elk container is installed double check elk-docker container is running by SSH into Elk VM ssh sysadmin@[private IP address]
-- Run sudo docker ps
+- Run `sudo docker ps`
 - Since the Elk server runs on port 5601 you need to create an incoming rule for the security group that allows TCP traffic over the port 5601 from your IP address.
 - Check that you can load the ELK stack server at http://[your.VM.IP]:5601/app/kibana.
 If everthing works correcty, you should see the home webpage of kibana.
