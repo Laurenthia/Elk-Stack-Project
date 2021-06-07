@@ -108,7 +108,7 @@ SSH into the control node and follow the steps below:
 - Which file is the playbook? 
   - [filebeat-playbook.yml](https://github.com/Laurenthia/Elk-Stack-Project/blob/c743bb59c7b913a42d73c256de95758fde7bd690/filebeat-playbook.yml)
 - Where do you copy it?
-  -  curl https://github.com/Laurenthia/Elk-Stack-Project/blob/c743bb59c7b913a42d73c256de95758fde7bd690/filebeat-playbook.yml > /etc/ansible/filebeat-playbook.yml
+  -  curl https://github.com/Laurenthia/Elk-Stack-Project/blob/c743bb59c7b913a42d73c256de95758fde7bd690/filebeat-playbook.yml > '/etc/ansible/filebeat-playbook.yml'
 - Which file do you update to make Ansible run the playbook on a specific machine?
   -  Update the Ansible [Hosts](https://github.com/Laurenthia/Elk-Stack-Project/blob/190ee4fb4680ad393dbaca2aa173d5fe264af010/Hosts) file within the Ansible container /etc/ansible/hosts
 - How do I specify which machine to install the ELK server on versus which to install Filebeat on?
